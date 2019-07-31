@@ -94,14 +94,14 @@ With this function you will receive the information that Pro Web Address (Verifi
 
 e.g
 
-``
+```javascript
 function customerCallBack(result) {
 	if (result) {
 		alert(result);
 		return true;
 	} else return false;
 }
-``
+```
 
 ####  2.1.4\. Global Intuitive
 Global Intuitive will correct your address in real time while your typing down your address in the address field box.
