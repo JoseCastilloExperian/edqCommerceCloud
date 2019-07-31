@@ -93,12 +93,15 @@ The user custom function should receive one parameter and should match the name 
 With this function you will receive the information that Pro Web Address (Verification Engine) returns.
 
 e.g
-`function customerCallBack(result) {
+
+``
+function customerCallBack(result) {
 	if (result) {
 		alert(result);
 		return true;
 	} else return false;
-}`
+}
+``
 
 ####  2.1.4\. Global Intuitive
 Global Intuitive will correct your address in real time while your typing down your address in the address field box.
