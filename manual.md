@@ -102,6 +102,7 @@ function customerCallBack(result) {
 	} else return false;
 }
 ```
+Note: The results from Pro Web Address (Verification Engine) may vary depending on the layout that you have configured.
 
 ####  2.1.4\. Global Intuitive
 Global Intuitive will correct your address in real time while your typing down your address in the address field box.
