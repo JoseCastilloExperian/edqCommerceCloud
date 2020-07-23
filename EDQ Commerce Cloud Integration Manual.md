@@ -216,7 +216,7 @@ To check the imported site preferences go to **Administration > Site Development
 
 ![Site Preferences 2](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/EDQ%20Cartridge%20Manual%20imgs/313SitePreferences2.png)
 
-###  3.2 Custom Code
+###  3.2 Touchpoints
 ####  3.2.1\. Sitegenesis JavaScript Controller
 **EDQHeaders integration**
 1.	Go to int_experian_sgjc cartridge and open the template located in **templates > default > components > header > htmlhead_UI.isml**
