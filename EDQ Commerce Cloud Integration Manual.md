@@ -154,6 +154,7 @@ To configure Global Intuitive, you need to access the Business Manager and go to
 * The Activates or deactivates Data Set usage option will let you choose to activate or deactivate Data Set usage.
 * The Data Set Code will let you set the Data Set that will be use for an especific country.
 * The activates or deactivates Data Set usage will let you use the Data Set function; it should be false for countries that don't need Data Sets. 
+* The Global Intuitive Use Current Location enables the location feature to search the neareast addresses from your current location. 
 
 The store touchpoints for Global Intuitive are:
 * Add/Edit Address form.
@@ -281,6 +282,11 @@ To check the imported site preferences go to **Administration > Site Development
 
 ### 3.3\. Testing
 For both (Sitegenesis and Storefront Reference Architecture) stores the testing touchpoints are the same.
+Automated tested are located in tests\tests\
+To run the tests:
+* Install intern (npm i intern).
+* If needed you'll have to install npx (npm install -g npx)
+* Run the command npx intern
 
 ####  3.3.1\. Email Validate
 In the create account page type your email in the email input field and the Email Validate will verify your email once you lose focus on the email field, the Email Validate will start working letting you know if is a valid or an invalid email.
@@ -336,15 +342,16 @@ Once the EDQ SitePreferences are uploaded in the business manager; choose your s
    1. Global Intuitive
    1. Verification Engine
    1. None
-7. Address layout (String): Address layout format for the data. Examples:
+7. Global Intuitive Use Current Location (Boolean): enables to use your current location.
+8. Address layout (String): Address layout format for the data. Examples:
    1. EDQ NA Integration 5 Line No Retention - North America Integration Layout Without Any Retention Elements
    1. EDQ NA Integration 5 Line Default - North America Integration Layout With Sub Premise And Care Of Retention
    1. EDQ NA Integration 5 Line Modified - North America Integration Layout With Sub Premise And Care Of Retention But With All Secondary Information Split Out For Concatenation
    1. EDQ NA Integration 5 Line Full Retention - North America Integration Layout With Sub Premise, Care Of, Pre Street, and Post Street Retention
-8. Data Set Code (String): Code to use Data Sets in case the country ISO code requires it.
-9. Activates or deactivates Data Set usage (Boolean): Activates or deactivates Data Set usage (only use for Non USA).
-10. Pro Web Custom Transition Callback (String): Name for the custom customer function to be triggered.
-11. Pro Web Callback validation (Boolean): Activates or deactivates page transition from the callback. 
+9. Data Set Code (String): Code to use Data Sets in case the country ISO code requires it.
+10. Activates or deactivates Data Set usage (Boolean): Activates or deactivates Data Set usage (only use for Non USA).
+11. Pro Web Custom Transition Callback (String): Name for the custom customer function to be triggered.
+12. Pro Web Callback validation (Boolean): Activates or deactivates page transition from the callback. 
 
 ![EDQ Config](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/EDQ%20Cartridge%20Manual%20imgs/510EDQConfig.png)
 
