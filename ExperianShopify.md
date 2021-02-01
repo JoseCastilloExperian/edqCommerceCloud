@@ -2,7 +2,6 @@
 Experian offers an 
 
 # Touchpoints
-* Registration
 * Add/Edit Address
 * Information (Shipping)
 * Checkout (Billing)
@@ -25,4 +24,23 @@ Install Node and npm
 *	edqShopify.js
 
 ![Assets](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/ShpifyImages/Assets.png)
+
 ![AddAssets](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/ShpifyImages/addAsset.png)
+
+## How the integration works
+There two separate files:
+
+#### shopifySinglePage.js 
+
+This file is a single integration page for cases where there's no multi-Address on the page.
+
+#### edqShopify.js
+
+This file is for cases where there's multi-Address on the page (Add/Edit Address touchpoint).
+
+Touchpoint | File
+------------ | -------------
+Add/Edit Address | edqShopify.js
+Shipping Address | shopifySinglePage.js
+Billing Address | shopifySinglePage.js
+
