@@ -24,3 +24,6 @@ Install Node and npm
 *	shopifySinglePage.js
 *	edqShopify.js
 
+![AddAsset0](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/EDQ%20Cartridge%20Manual%20imgs/211EmailOptions.png)
+![AddAsset1](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/blob/master/ShpifyImages/addAsset.png)
+![AddAsset2](https://github.com/JoseCastilloExperian/edqCommerceCloud/blob/master/ShpifyImages/addAsset.png)
