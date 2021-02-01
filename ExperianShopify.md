@@ -18,12 +18,11 @@ Install Node and npm
 
 # Integration
 ## Steps
-1. Download the file from ""
+1. Download the file from "".
 2. Log in to your Shopify Sandbox.
 3. Add the following files into **"Asset"** section:
 *	shopifySinglePage.js
 *	edqShopify.js
 
-![AddAsset0](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/EDQ%20Cartridge%20Manual%20imgs/211EmailOptions.png)
-![AddAsset1](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/blob/master/ShpifyImages/addAsset.png)
-![AddAsset2](https://github.com/JoseCastilloExperian/edqCommerceCloud/blob/master/ShpifyImages/addAsset.png)
+![Assets](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/ShpifyImages/Assets.png)
+![AddAssets](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/ShpifyImages/addAsset.png)
