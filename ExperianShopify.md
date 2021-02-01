@@ -38,9 +38,14 @@ This file is a single integration page for cases where there's no multi-Address 
 
 This file is for cases where there's multi-Address on the page (Add/Edit Address touchpoint).
 
-Touchpoint | File
+Touchpoint | Shopify file | Integration file
 ------------ | -------------
-Add/Edit Address | edqShopify.js
-Shipping Address | shopifySinglePage.js
-Billing Address | shopifySinglePage.js
+Add/Edit Address | templates/customers/addresses.liquid | edqShopify.js
+Shipping Address | templates/checkout/shippingAddress.liquid | shopifySinglePage.js
+Billing Address | templates/customers/billingAddress.liquid | shopifySinglePage.js
+
+Adding the following line ```<script src="{{ 'edqShopify.js' | asset_url }}"></script>``` at the end of the file.
+
+![AddAssets](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/ShpifyImages/addAsset.png)
+
 
