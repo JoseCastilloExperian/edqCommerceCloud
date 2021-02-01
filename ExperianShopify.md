@@ -46,6 +46,6 @@ Billing Address | templates/customers/billingAddress.liquid | shopifySinglePage.
 
 Adding the following line ```<script src="{{ 'edqShopify.js' | asset_url }}"></script>``` at the end of the file.
 
-![AddAssets](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/ShpifyImages/addAsset.png)
+![lineTag](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/ShpifyImages/lineTag.png)
 
 
