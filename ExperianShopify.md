@@ -1,13 +1,13 @@
-#Summary
+# Summary
 Experian offers an 
 
-#Touchpoints
+# Touchpoints
 * Registration
 * Add/Edit Address
 * Information (Shipping)
 * Checkout (Billing)
 
-##Steps
+## Steps
 1. Download the file from ""
 2. Log in to your Shopify Sandbox.
 3. Add the following files into **"Asset"** section:
