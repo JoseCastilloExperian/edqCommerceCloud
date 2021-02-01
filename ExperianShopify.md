@@ -11,6 +11,7 @@ Experian offers an
 Donwload the Shopify/Experian integration files.
 Ope your prefered command line prompt "Bash" or "CMD" and locate the integration file root "Shopify".
 Run the following command ``` npm run build```
+
 ***Pre-requisits
 ***Install Node and npm
 
