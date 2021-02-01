@@ -13,8 +13,8 @@ Ope your prefered command line prompt "Bash" or "CMD" and locate the integration
 Run the following command ``` npm run build```
 Next locate "lib" folder; within the "lib" folder there will be "shopifySinglePage.js" and "edqShopify.js" files.
 
-####Pre-requisits
-Install Node and npm
+** Pre-requisits
+** Install Node and npm
 
 # Integration
 ## Steps
