@@ -1,7 +1,42 @@
 # Summary
-Experian offers an 
+Experian offers a non partnered integration to Shopify stores.
 
-# Touchpoints
+The integration offers Global Phone Validation, Email Validation, Pro web Address Validation and Global Intuitive.
+
+#### Email Validate
+Email Validation will check your email at the moment you finish typing in the email field box and once you lose focus on the email field the Email Validate will start working letting you know if is a valid or an invalid email.
+
+Email validate can result in two potential outcomes.
+
+Verification Level | Description | Icon
+------------ | ------------- | -------------
+Verified | Email exists, or is a company internal email, is reachable and is valid. | ![verified Icon](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/ShpifyImages/SalesForceCert.PNG)
+Invalid | Mailbox or domain does not exist or is unreachable, illegitimate or disposable. | ![Invalid Icon](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/ShpifyImages/invalidIcon.png)
+
+#### Global Phone Validate
+Global Phone Validate will check your phone at the moment you finish typing in the phone field box and once you lose focus on the phone field, the Global Phone Validate will start working letting you know if is a valid or an invalid phone.
+
+Global Phone Validate can result in two potential outcomes.
+
+Verification Level | Description | Icon
+------------ | ------------- | -------------
+Verified | Phone matched to a high confidence and returned as a valid number. | ![verified Icon](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/ShpifyImages/SalesForceCert.PNG)
+Invalid | Could not match the number and returned as an invalid number. | ![Invalid Icon](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/ShpifyImages/invalidIcon.png)
+
+#### Pro Web Address Validation
+Pro Web Address Validation will check your address and correct if possible; once you type your address in the respective address fields and press the page form submitting button. 
+
+In case that your address needs to be corrected and does not match an address; Pro Web - Address (Verification Engine) will prompt a “confirm updated address” box to complete your address in real time; by typing down the address in the address input field, it will give you options with accurate addresses matching the address with the information provided by the user and finally by selecting one of the options it will autocomplete the addresses fields in the address form with correct and valid address and may continue with the store process.
+
+[For more information about Pro Web - Address (Verification Engine).](https://www.edq.com/documentation/apis/address-validate/soap/)
+
+#### Global Intuitive
+Global Intuitive will correct your address in real time while your typing down your address in the address field box.
+Global Intuitive will automatically fill the rest of the address fields in the form.
+
+[For more information about Global Intuitive.](https://www.edq.com/documentation/apis/address-validate/global-intuitive/)
+
+## Integration Touchpoints
 * Add/Edit Address
 * Information (Shipping)
 * Checkout (Billing)
@@ -68,7 +103,8 @@ Adding the following line ```<script src="{{ 'edqShopify.js' | asset_url }}"></s
 
 ![lineTag](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/ShpifyImages/lineTag.png)
 
-###Configure your files
+### Configure your files
+
 Within both files you can configure your token (provided by Experian) and validations that'll be working across the page that you want. 
 
 To configure the validations that'll be included in the page; set "true" if you want the validation to be activated on the page or "false" if you don't want the validation to be active in your page.
