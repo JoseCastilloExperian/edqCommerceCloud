@@ -72,34 +72,34 @@ Billing Address | templates/customers/billingAddress.liquid | shopifySinglePage.
 
 There two separate files:
 
-#### shopifySinglePage.js 
+#### shopifySinglePage.js
 
 This file is a single integration page for cases where there's no multi-Address on the page.
 
-Adding the following line 
+Adding the following line at the end of the ```header``` section in  ```checkout.liquid```:
 
 ```
 <script src="{{ 'shopifySinglePage.js' | asset_url }}"></script>
+```
 
+In ```shippingAddress.liquid``` and ```billingAddress.liquid``` add the following lines:
+
+```
 <script type="text/javascript">
-	window.Shopify.shopifySinglePage.phoneValidation(document.querySelector('#AddressPhoneNew'));
-  
-  window.Shopify.shopifySinglePage.globalIntuitive(document.querySelector('.form-vertical'));
-  
-  window.Shopify.shopifySinglePage.addressValidation(document.querySelector('.form-vertical', document.querySelector('[value="Add Address"]')));
-  
+window.Shopify.shopifySinglePage.globalIntuitive(document.querySelector('.fieldset'));
+window.Shopify.shopifySinglePage.addressValidation(document.querySelector('.fieldset'));  
 </script>
 ``` 
 
-at the end of the file.
+![HeaderScriptSingleFile](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/ShpifyImages/lineHeaderScriptSingleFile.png)
 
-![lineTag](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/ShpifyImages/lineTag.png)
+![lineScriptSingleFile](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/ShpifyImages/lineScriptSingleFile.png)
 
 #### edqShopify.js
 
 This file is for cases where there's multi-Address on the page (Add/Edit Address touchpoint).
 
-Adding the following line ```<script src="{{ 'edqShopify.js' | asset_url }}"></script>``` at the end of the file.
+Adding the following line ```<script src="{{ 'edqShopify.js' | asset_url }}"></script>``` in ```addresses.liquid``` at the end of the file.
 
 ![lineTag](https://raw.githubusercontent.com/JoseCastilloExperian/edqCommerceCloud/master/ShpifyImages/lineTag.png)
 
@@ -170,3 +170,59 @@ Set the Global Intuitive token (provided by Experian or created by the Saas Port
 
 ##### You can use the same token for all validations as long as you have configured all validations in a single token.
 
+## How it works!
+
+The integration is created based on the Shopify default store, here are some key steps to take in considration when adding the integration.
+
+```document.head.appendChild(edqScript);``` will create Experian Libraries within the file your Shopify "liquid" template.
+
+#### shopifySinglePage.js
+
+Offers four functions:
+* phoneValidation
+* emailValidation
+* globalIntuitive
+* addressValidation
+
+For **globalIntuitive, addressValidation** functions; they will receive a non optional ```div``` that'll be the address fields container; each function will read the ```div``` and will try to extract all fields and place them into the configuration fields.
+
+For  **globalIntuitive, addressValidation** functions; they will receive a non optional ```Element```; which means that you'll have to send the phone element, email element directly to validate that field
+
+#### edqShopify.js
+
+Cases where there's an option for multiple addresses like in **Edit/Add Address** touchpoint, this file offers you an ```Element``` observer that will look at the the addresses elements to activate the validation.
+
+## Configuration
+
+#### Pro Web Address Validation
+
+* PRO_WEB_TIMEOUT: will set a timeout for the request to the phone validation API.
+* PRO_WEB_SUBMIT_TRIGGERS: will override the submit form action and verify the address.
+* PRO_WEB_CALLBACK: will add an action to be triggered after the validation is done, receives a function.
+* PRO_WEB_COUNTRY: country code ISO-3; will check the address for the country.
+* PRO_WEB_LAYOUT: this option will work across with the mapping; the layout is how the data is going to be send to our API and how it's going to be posted to the mapping fields.
+* PRO_WEB_MAPPING: address mapping fields where the address is going to be verified.
+**field:** is the address field in the form. 
+**elements:** is the layout mapping that is going to be send to the API (do not modify unless your layout has a different set of labels).
+**modalFieldSelector:** will be show in some specific cases where the address requires interaction (do not modify).
+
+#### Global Intuitive
+
+* GLOBAL_INTUITIVE_ISO3_COUNTRY: country code ISO-3; will check the address for the country.
+* GLOBAL_INTUITIVE_USE_CURRENT_LOCATION: allow to use your current location to get a closer matching address.
+* GLOBAL_INTUITIVE_ELEMENT: address element where the address is going to be type down.
+* GLOBAL_INTUITIVE_MAPPING: address mapping fields where the address is going to be set after choosing one option.
+**field:** is the address field in the form.
+**elements:** is the layout mapping that is going to be send to the API (do not modify).
+* AUTOCOMPLETION_SETTINGS: enables or disables the Global Intuitive cache.
+**cache:** use true to enable or false to disable.
+
+#### Global Phone Validation
+
+* PHONE_TIMEOUT: will set a timeout for the request to the phone validation API.
+* PHONE_ELEMENTS: phone element to validate.
+
+#### Email Validation
+
+* EMAIL_TIMEOUT:  will set a timeout for the request to the phone validation API.
+* EMAIL_ELEMENTS: email element to validate.
